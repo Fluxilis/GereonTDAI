@@ -1,2 +1,6 @@
-﻿  TowerDefence.cpp
+﻿  Commander.cpp
+c:\projects\gereontdai\project\towerdefence\towerdefence\commander.cpp(128): warning C4018: '<': signed/unsigned mismatch
+c:\projects\gereontdai\project\towerdefence\towerdefence\commander.cpp(197): warning C4018: '<': signed/unsigned mismatch
+c:\projects\gereontdai\project\towerdefence\towerdefence\commander.cpp(258): warning C4018: '<': signed/unsigned mismatch
+c:\projects\gereontdai\project\towerdefence\towerdefence\commander.cpp(342): warning C4018: '<': signed/unsigned mismatch
   TowerDefence.vcxproj -> C:\Projects\GereonTDAI\Project\TowerDefence\Debug\TowerDefence.exe

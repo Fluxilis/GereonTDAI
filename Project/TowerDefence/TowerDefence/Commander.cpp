@@ -281,3 +281,80 @@ CommanderPassive::CommanderPassive(int i, int w, int h) : Commander(i, w, h) {
 	switchi = 0;
 
 }
+
+void CommanderPassive::build_turrets(Cell*** &lane) {
+	
+}
+
+void CommanderPassive::recrute_soldiers() {
+
+
+}
+
+vector<Depoyment*>* CommanderPassive::deploy() {
+	vector<Depoyment*>* deploymentList = new vector<Depoyment*>[DEPLENGTH];
+
+	return deploymentList;
+}
+
+vector<UnitAI*>* CommanderPassive::get_towers() {
+	return &towers;
+}
+
+vector<UnitAI*>* CommanderPassive::get_soldiers() {
+	return &army;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CommanderSoldierSpam::CommanderSoldierSpam(int i, int w, int h) : Commander(i, w, h) {
+	switchi = 0;
+
+}
+
+void CommanderSoldierSpam::build_turrets(Cell*** &lane) {
+
+}
+
+void CommanderSoldierSpam::recrute_soldiers() {
+
+	int maxCounter = 0;
+	bool moneyRemaining = true;
+	while (moneyRemaining)
+	{
+		Unit *u = new RifleSoldier(id);
+		UnitAI* ai = new RifleAIA(u);
+		army.push_back(ai);
+		moneyRemaining = salary_paid(ai);
+		maxCounter++;
+		if (maxCounter > 200)
+		{
+			return;
+		}
+	}
+}
+
+vector<Depoyment*>* CommanderSoldierSpam::deploy() {
+	vector<Depoyment*>* deploymentList = new vector<Depoyment*>[DEPLENGTH];
+
+	for (int h = 0; h < DEPLENGTH; h++) {
+		deploymentList[h] = vector<Depoyment*>();
+		if (h <army.size()) {
+			deploymentList[h].push_back(new Depoyment);
+			deploymentList[h].back()->pos = h%7;
+			deploymentList[h].back()->wave = 0;
+			deploymentList[h].back()->unit = army[h];
+		}
+
+	}
+
+	return deploymentList;
+}
+
+vector<UnitAI*>* CommanderSoldierSpam::get_towers() {
+	return &towers;
+}
+
+vector<UnitAI*>* CommanderSoldierSpam::get_soldiers() {
+	return &army;
+}

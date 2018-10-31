@@ -255,11 +255,11 @@ int main()
 	Cell*** lane2;
 
 	Commander *commander1 = new Commander(1, WIDTH, HIGHT);
-	CommanderA commandertest1(1, WIDTH, HIGHT);
+	CommanderSoldierSpam commandertest1(1, WIDTH, HIGHT);
 	commander1 = &commandertest1;
 
 	Commander *commander2 = new Commander(2, WIDTH, HIGHT);
-	CommanderB commandertest2(2, WIDTH, HIGHT);
+	CommanderPassive commandertest2(2, WIDTH, HIGHT);
 	commander2 = &commandertest2;
 
 	lane1 = new Cell**[HIGHT+1];
