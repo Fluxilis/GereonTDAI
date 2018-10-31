@@ -1,11 +1,1 @@
-﻿  Cell.cpp
-  Commander.cpp
-c:\users\gereo\documents\arbeit\2018\towerdefence\towerdefence\commander.cpp(128): warning C4018: '<': signed/unsigned mismatch
-c:\users\gereo\documents\arbeit\2018\towerdefence\towerdefence\commander.cpp(197): warning C4018: '<': signed/unsigned mismatch
-c:\users\gereo\documents\arbeit\2018\towerdefence\towerdefence\commander.cpp(258): warning C4018: '<': signed/unsigned mismatch
-  TowerDefence.cpp
-  Unit.cpp
-  UnitAI.cpp
-  Generating Code...
-c:\users\gereo\documents\arbeit\2018\towerdefence\towerdefence\cell.cpp(26): warning C4715: 'Cell::find_occupant': not all control paths return a value
-  TowerDefence.vcxproj -> C:\Users\gereo\Documents\Arbeit\2018\TowerDefence\Debug\TowerDefence.exe
+﻿  TowerDefence.vcxproj -> C:\Projects\GereonTDAI\Project\TowerDefence\Debug\TowerDefence.exe
