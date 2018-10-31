@@ -6,11 +6,17 @@
 #include "Commander.h"
 #include "Unit.h"
 #include "UnitAI.h"
+
+#include <conio.h>
+#include "Windows.h"
 using namespace std;
 
 const int WIDTH = 7;
 const int HIGHT = 20;
 
+
+const int TURNLIMIT = 2;
+const int DefaultTURNLIMIT = 100;
 
 /*
 Input:
@@ -174,6 +180,7 @@ void start_attack(Cell*** lane1, Cell*** lane2, Commander* commander1, Commander
 	vector<UnitAI*>* army2 = new vector<UnitAI*>;
 	vector<Depoyment*>* deployment1 = commander1->deploy();
 	vector<Depoyment*>* deployment2 = commander2->deploy();
+	
 	for (int timestep = 0; timestep < 100; timestep++) {
 		deploy(&deployment1[timestep], lane2, army1);
 		deploy(&deployment2[timestep], lane1, army2);
@@ -187,6 +194,9 @@ void start_attack(Cell*** lane1, Cell*** lane2, Commander* commander1, Commander
 		commander2->recieve_funds(update_army(army1, commander1, HP2));
 		commander1->recieve_funds(update_army(army2, commander2, HP1));
 
+
+		Sleep(60);
+		system("CLS");
 		
 
 		printLanes(lane1, lane2);
@@ -224,7 +234,7 @@ void update(Cell*** lane1, Cell*** lane2, Commander* commander1, Commander* comm
 
 		start_attack(lane1, lane2, commander1, commander2, &HP1, &HP2);
 
-		if (counter >= 100 || HP1 <=0 || HP2 <=0) {
+		if (counter >= TURNLIMIT || HP1 <=0 || HP2 <=0) {
 
 			return;
 		}
@@ -269,5 +279,8 @@ int main()
 
 	update(lane1, lane2, commander1, commander2);
 	
+
+	getchar();
+
 	return 0;
 }

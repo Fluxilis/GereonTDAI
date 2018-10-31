@@ -273,3 +273,11 @@ vector<UnitAI*>* CommanderB::get_towers() {
 vector<UnitAI*>* CommanderB::get_soldiers() {
 	return &army;
 }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+CommanderPassive::CommanderPassive(int i, int w, int h) : Commander(i, w, h) {
+	switchi = 0;
+
+}

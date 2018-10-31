@@ -79,4 +79,24 @@ private:
 
 };
 
+class CommanderPassive : public Commander {
+
+public:
+	int counter;
+	CommanderPassive(int id, int w, int h);
+	/*
+	void build_turrets(Cell *** &lane);
+	void recrute_soldiers();
+	vector<UnitAI*>* get_towers();
+	vector<UnitAI*>* get_soldiers();
+	vector<Depoyment*>* deploy();
+	*/
+
+protected:
+
+private:
+	int switchi;
+
+};
+
 #endif
