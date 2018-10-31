@@ -1,0 +1,9 @@
+﻿  UnitController.cpp
+  UnitAI.cpp
+  TowerDefence.cpp
+  Unit.cpp
+  Commander.cpp
+  Cell.cpp
+  Code wird generiert...
+c:\users\umbra\source\repos\towerdefence\towerdefence\cell.cpp(16): warning C4715: "Cell::find_occupant": Nicht alle Codepfade geben einen Wert zurück.
+  TowerDefence.vcxproj -> C:\Users\Umbra\source\repos\TowerDefence\x64\Debug\TowerDefence.exe
